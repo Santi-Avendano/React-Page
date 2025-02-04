@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.content {
+    border-color: grey;
+    border-width: 3px;
+}

@@ -1,4 +1,5 @@
 import { useState } from "react"
+import ExperienceInfo from "./ExperienceInfo";
 
 function Experience () {
     
@@ -28,6 +29,11 @@ function Experience () {
         setText("");
     };
 
+
+    const handleDelete = (id) => {
+        setExperienceList(experienceList.filter((entry) => entry.id !== id))
+    }
+
     return (
         <div class='m-5 border-2 rounded-2xl shadow-gray-400 p-3 hover:bg-gray-500'>
         <h2>Experience</h2>
@@ -54,7 +60,20 @@ function Experience () {
             >
             Submit
             </button>
+
         </form>
+
+        <div>
+            {experienceList.map((exp) => (
+                <ExperienceInfo 
+                    key={exp.id}
+                    company={exp.company}
+                    rol={exp.rol}
+                    text={exp.text}
+                    onDelete={() => handleDelete(exp.id)}
+                />
+            ))}
+        </div>
         </div>
     )
 }

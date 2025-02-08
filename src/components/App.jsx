@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import '../styles/App.css'
 import Personal from './Personal'
 import Education from './Education'

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className='principal'>
-      <div>HELLO WORLD!</div>
+      <h1>CREATE YOUR CV HERE!</h1>
       <Personal/>
       <Education/>
       <Experience />

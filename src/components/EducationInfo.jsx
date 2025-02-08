@@ -1,6 +1,9 @@
+import '../styles/Education.css'
+
+
 function EducationInfo ({schoolName, degree, text, onDelete}) {
     return (
-        <div class='flex bg-gray-600 rounded mx-4'>
+        <div className='container'>
             <h3>School/College: <p>{schoolName}</p></h3>
             <h3>Degree: <p>{degree}</p></h3>
             <h3>Description: <p>{text}</p></h3>

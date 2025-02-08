@@ -1,5 +1,7 @@
 import EducationInfo from "./EducationInfo";
 import { useState } from "react";
+import '../styles/Education.css'
+
 
 function Education() {
     const [schoolName, setSchoolName] = useState("");
@@ -36,19 +38,22 @@ function Education() {
     }
 
     return (
-        <div className="m-4 border-2 rounded-2xl p-3">
+        <div className="container">
         <h2>Education</h2>
         
-        <form onSubmit={handleSubmit} className="flex flex-wrap space-x-4">
-            <label>School/College: </label>
-            <input onChange={(e) => setSchoolName(e.target.value)} value={schoolName} />
-            
-            <label>Degree: </label>
-            <input onChange={(e) => setDegree(e.target.value)} value={degree} />
-            
-            <label>Additional information: </label>
-            <textarea value={text} onChange={handleChange} />
-
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label>School/College: </label>
+                <input onChange={(e) => setSchoolName(e.target.value)} value={schoolName} />
+            </div>
+            <div>
+                <label>Degree: </label>
+                <input class='bg-white' onChange={(e) => setDegree(e.target.value)} value={degree} />
+            </div>
+            <div className="addInfo">
+                <label>Additional information: </label>
+                <textarea value={text} onChange={handleChange} />
+            </div>
             <button
             type="submit"
             className="bg-green-400 hover:bg-green-500 

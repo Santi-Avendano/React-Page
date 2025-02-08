@@ -15,7 +15,7 @@ function Personal () {
     }
 
     return (
-    <div class='m-4 p-2'>
+    <div className='content'>
         <h2 class='font-bold'>Personal Information</h2>
 
         {submitted ? (
